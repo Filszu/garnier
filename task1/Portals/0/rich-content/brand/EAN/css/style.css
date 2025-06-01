@@ -4,7 +4,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
- 
+}
+:root {
+    --garnier-orange: #ea580c;
 }
 
 body {
@@ -12,34 +14,27 @@ body {
   color: #333;
   background-color: #fff;
 }
+
 .garnier__header__container {
-  min-height: 100vh;
   background-color: #ffffff;
 }
 
 .garnier__header__section {
   position: relative;
+  display: flex;
+  flex-direction: row;
   height: 400px;
   overflow: hidden;
 }
 
 .garnier__header__left,
 .garnier__header__right {
-  position: absolute;
-  top: 0;
   width: 50%;
   height: 100%;
-}
-
-.garnier__header__left {
-  left: 0;
-}
-
-.garnier__header__right {
-  right: 0;
+  position: relative;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
 }
 
 .garnier__header__left-image,
@@ -52,15 +47,13 @@ body {
 .garnier__header__logo {
   position: absolute;
   top: 0rem;
-  /* right: 2rem; */
   left: 50%;
-    
- 
   z-index: 3;
 }
+
 .garnier__header__logo .box {
-    position: absolute;
- top:0;
+  position: absolute;
+  top: 0;
   width: 100vw;
   background-color: white;
   height: 4rem;
@@ -69,9 +62,8 @@ body {
 
 .garnier__header__logo-image {
   width: 290px;
-  /* height: 40px; */
   object-fit: contain;
-   transform: translate(-3rem, -0%);
+  transform: translate(-3rem, -0%);
 }
 
 .garnier__header__pipette {
@@ -88,28 +80,18 @@ body {
 
 .garnier__header__text {
   position: absolute;
-  /* top: 50%;
-  right: 2rem;
-  transform: translateY(-50%); */
-  /* text-align: right; */
 }
 
 .garnier__header__title {
   font-size: 2.25rem;
-  font-weight: bold;
-  color: #ea580c; /* orange-600 */
-  /* margin-bottom: 0.5rem; */
   font-weight: 600;
+  color: #ea580c; /* orange-600 */
 }
 
 .garnier__header__highlight {
-  /* color: #ef4444;  */
-  /* boldtext */
   font-size: 6rem;
-position: relative;
-top: .8rem;
-
-    
+  position: relative;
+  top: .8rem;
 }
 
 .garnier__header__subtitle {
@@ -121,23 +103,22 @@ top: .8rem;
 
 .garnier__header__description {
   font-size: 1.25rem;
-/* gray-700 */
+  font-weight: 400;
   margin-top: 0.05rem;
   text-align: center;
-  font-weight: 400;
 }
 
 .garnier__header__bottle {
   position: absolute;
   left: 50%;
-    
-  transform: translate(-40%, -0%);
+  transform: translate(-40%, 0%);
   bottom: -5px;
   z-index: 10;
-  & img{
-    width: 80%;
-    height: auto;
-  }
+}
+
+.garnier__header__bottle img {
+  width: 80%;
+  height: auto;
 }
 
 .garnier__header__bottle-image {
@@ -145,3 +126,238 @@ top: .8rem;
   height: 200px;
   object-fit: contain;
 }
+/* --------------- */
+.garnier__ingredients__container
+{
+    width: 100%;
+    position: relative;
+}
+.garnier__ingredients__wrapper{
+    width: 10%;
+}
+
+.garnier__ingredients__capsule{
+    position: relative;
+    width: 100%;
+    height: 400px; 
+    position: relative
+}
+
+.garnier__ingredients__capsule-image {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  /* object-fit: contain; */
+  z-index: 1;
+
+}
+
+.garnier__ingredients__grid{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #ea580c; /* orange-600 */
+    z-index: 2; /* Ensure grid is above lemon image */
+    pointer-events: none; /* Optional: allow clicks to pass through */
+}
+.garnier__ingredients__item{
+
+
+   
+}
+.box-title{
+    font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--garnier-orange);
+        margin-bottom: 0.5rem;
+        
+        text-transform: uppercase;
+
+
+}
+
+.garnier__ingredients__vitamin-c{
+    background-color: #fef3c7; /* yellow-100 */
+    /* grid top left */
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  .garnier__header__section {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .garnier__header__left,
+  .garnier__header__right {
+    width: 100%;
+    height: auto;
+  }
+
+  .garnier__header__bottle {
+    position: absolute;
+   /* left:0;
+   right: 0; */
+    /* transform: translateX(-50%); */
+    bottom: 51%;
+    left: 90%;
+    /* top:0; */
+    margin-top: 1rem;
+    width: 15%;
+  }
+
+  .garnier__header__bottle-image{
+
+  }
+
+  .garnier__header__pipette {
+    top: 0rem;
+    left: 1rem;
+    /* width: 25%; */
+  }
+
+  .garnier__header__logo-image {
+    width: 200px;
+    transform: translate(-50%, 0%);
+  }
+
+  .garnier__header__logo .box {
+    width: 200vw;
+   right:0px;
+   display: none;
+  }
+}
+
+
+.vitamin-layout {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    
+}
+
+.vitamin-layout__container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.vitamin-layout__center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.vitamin-layout__lemon-image {
+    width: 50vw;
+    max-width: 600px;
+    height: auto;
+   
+}
+
+/* Info Card Base Styles */
+.info-card {
+    position: absolute;
+    max-width: 280px;
+    z-index: 20;
+}
+
+.info-card__bracket {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    /* height: 10%; */
+    z-index: 1;
+}
+
+.info-card__bracket-image {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+}
+
+.info-card__content {
+    position: relative;
+    z-index: 2;
+    padding: 20px 25px;
+}
+
+.info-card__title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff6b35;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.info-card__description {
+    font-size: 12px;
+    line-height: 1.2;
+    color: #333;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.info-card__description strong {
+    font-weight: 700;
+    color: #222;
+}
+
+/* Position Modifiers */
+.info-card--top-right {
+    top: 80px;
+    right: 60px;
+}
+
+.info-card--top-right .info-card__content {
+    padding-top: 40px;
+    padding-right: 40px;
+}
+
+/* -- */
+.info-card--top-right .info-card__bracket {
+    position: absolute;
+    left: -110px;
+    top: 10px;
+}
+
+.info-card--bottom-left {
+    bottom: 120px;
+    left: 60px;
+}
+
+.info-card--bottom-left .info-card__content {
+    padding-bottom: 40px;
+    padding-left: 40px;
+}
+
+.info-card--bottom-left .info-card__title {
+    font-size: 20px;
+}
+
+.info-card--bottom-right {
+    bottom: 80px;
+    right: 60px;
+}
+
+.info-card--bottom-right .info-card__content {
+    padding-bottom: 40px;
+    padding-right: 40px;
+}
+
