@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+.garnier__header__container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.garnier__header__section {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.garnier__header__left,
+.garnier__header__right {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.garnier__header__left {
+  left: 0;
+}
+
+.garnier__header__right {
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.garnier__header__left-image,
+.garnier__header__right-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.garnier__header__logo {
+  position: absolute;
+  top: 0rem;
+  /* right: 2rem; */
+  left: 50%;
+    
+ 
+  z-index: 3;
+}
+.garnier__header__logo .box {
+    position: absolute;
+ top:0;
+  width: 100vw;
+  background-color: white;
+  height: 4rem;
+  z-index: -2;
+}
+
+.garnier__header__logo-image {
+  width: 290px;
+  /* height: 40px; */
+  object-fit: contain;
+   transform: translate(-3rem, -0%);
+}
+
+.garnier__header__pipette {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}
+
+.garnier__header__pipette-image {
+  width: 80px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.garnier__header__text {
+  position: absolute;
+  /* top: 50%;
+  right: 2rem;
+  transform: translateY(-50%); */
+  /* text-align: right; */
+}
+
+.garnier__header__title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #ea580c; /* orange-600 */
+  /* margin-bottom: 0.5rem; */
+  font-weight: 600;
+}
+
+.garnier__header__highlight {
+  /* color: #ef4444;  */
+  /* boldtext */
+  font-size: 6rem;
+position: relative;
+top: .8rem;
+
+    
+}
+
+.garnier__header__subtitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937; /* gray-800 */
+  text-align: center;
+}
+
+.garnier__header__description {
+  font-size: 1.25rem;
+/* gray-700 */
+  margin-top: 0.05rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+.garnier__header__bottle {
+  position: absolute;
+  left: 50%;
+    
+  transform: translate(-40%, -0%);
+  bottom: -5px;
+  z-index: 10;
+  & img{
+    width: 80%;
+    height: auto;
+  }
+}
+
+.garnier__header__bottle-image {
+  width: 120px;
+  height: 200px;
+  object-fit: contain;
+}
