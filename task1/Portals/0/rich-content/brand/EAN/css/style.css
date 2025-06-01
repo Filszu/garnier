@@ -181,12 +181,7 @@ body {
 
 }
 
-.garnier__ingredients__vitamin-c{
-    background-color: #fef3c7; /* yellow-100 */
-    /* grid top left */
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-}
+
 
 
 /* Responsive layout */
@@ -258,17 +253,18 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: -2;
 }
 
 .vitamin-layout__lemon-image {
-    width: 50vw;
-    max-width: 600px;
+    width: 70vw;
+    /* max-width: 900px; */
     height: auto;
+    z-index: -1;
    
 }
 
-/* Info Card Base Styles */
+
 .info-card {
     position: absolute;
     max-width: 280px;
@@ -321,8 +317,8 @@ body {
 
 /* Position Modifiers */
 .info-card--top-right {
-    top: 80px;
-    right: 60px;
+    top: 120px;
+    right: 140px;
 }
 
 .info-card--top-right .info-card__content {
@@ -334,12 +330,12 @@ body {
 .info-card--top-right .info-card__bracket {
     position: absolute;
     left: -110px;
-    top: 10px;
+    top: 15px;
 }
 
 .info-card--bottom-left {
     bottom: 120px;
-    left: 60px;
+    left: 160px;
 }
 
 .info-card--bottom-left .info-card__content {
@@ -351,9 +347,14 @@ body {
     font-size: 20px;
 }
 
+.info-card--bottom-left .info-card__bracket {
+    top: 20px;
+    left: 20px;
+}
+
 .info-card--bottom-right {
     bottom: 80px;
-    right: 60px;
+    right: 200px;
 }
 
 .info-card--bottom-right .info-card__content {
